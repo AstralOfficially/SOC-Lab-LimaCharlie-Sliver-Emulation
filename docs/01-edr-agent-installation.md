@@ -1,4 +1,4 @@
-# Phase 1: EDR Setup and Configuration
+# Phase 1: LimaCharlie Organization & Sensor Deployment
 
 ## Purpose
 Deploy the LimaCharlie EDR sensor onto the target Windows VM endpoint, establish cloud connectivity, configure Windows artifact log collection, and enable community Sigma rule detection integration.
