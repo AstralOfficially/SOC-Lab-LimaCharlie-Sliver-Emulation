@@ -74,6 +74,14 @@ This repository documents the end-to-end setup of an enterprise Detection and Re
 
 #### A. Session Establishment
 Detonating the payload established an active C2 session back to the operator console:
+
+
+## Documentation Index
+- [01. EDR Setup and Configuration](docs/01-edr-setup-and-configuration.md)
+- [02. C2 Infrastructure and Payload Generation](docs/02-c2-infrastructure-and-payload-generation.md)
+- [03. Execution and Post-Exploitation](docs/03-execution-and-post-exploitation.md)
+- [04. Detection Analysis and Engineering](docs/04-detection-analysis-and-engineering.md)
+- [05. Lessons Learned & Retrospective](docs/05-lessons-learned.md)
 ```text
 [server] sliver > sessions
 ID         Name             Transport   Remote Address          Hostname            Username
