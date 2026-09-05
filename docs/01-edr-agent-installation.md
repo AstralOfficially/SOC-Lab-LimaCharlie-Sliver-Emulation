@@ -17,17 +17,44 @@ Deploy the LimaCharlie EDR sensor onto the target Windows VM endpoint, establish
    - Copy the generated enrollment key secret for command-line agent deployment.
 
 <!-- Screenshot Placeholder -->
-> **Screenshot:** `screenshots/01-limacharlie-sensor-installation-key.png`  
-> **Timestamp:** `[00:03:10]`  
+> **Screenshot:** <img src="../screenshots/01-limacharlie-sensor-installation-key.png">
+> **Timestamp:** <a href="https://www.youtube.com/watch?v=du6_Dk7-a-k&t=3m10s"> <img src="https://img.shields.io/badge/-Youtube-CD201F?&style=for-the-badge&logo=youtube&logoColor=white" /></a>
+
 > **Caption:** Generating the "Windows VMNET" installation enrollment key in the LimaCharlie dashboard.
+
 
 ---
 
+---
 ## 2. Sensor Deployment on Target Windows VM
-The Windows sensor executable (`lc_sensor.exe`) was pre-staged in the `C:\Users\Administrator\Downloads` folder.
+1.  The Windows sensor executable (`lc_sensor.exe`) was pre-staged in the `C:\Users\Administrator\Downloads` folder.
 
-Run an elevated command prompt on the Windows target and execute:
+2. Run an elevated command prompt on the Windows target and execute:
 
 ```cmd
 cd C:\Users\Administrator\Downloads
 lc_sensor.exe -i <YOUR_INSTALLATION_KEY_HERE>
+```
+
+   - -i: Instructs the agent to register as a system service using the designated key.
+   - Upon execution, verify that the sensor initializes and registers back with the cloud console under the Sensors tab.
+
+<!-- Screenshot Placeholder -->
+> **Screenshot:** <img src="../screenshots/02-sensor-enrollment-cli.png">
+> **Timestamp:** <a href="https://www.youtube.com/watch?v=du6_Dk7-a-k&t=4m49s"> <img src="https://img.shields.io/badge/-Youtube-CD201F?&style=for-the-badge&logo=youtube&logoColor=white" /></a>
+
+> **Caption:** Executing lc_sensor.exe -i via Windows Command Prompt.
+---
+
+---
+## 3. Host Artifact Ingestion (Sysmon Collection)
+
+To ingest low-level Windows operational security events:
+
+1.  Navigate to Artifact Collection in the LimaCharlie left navigation bar.
+2.  Create an ingestion rule targeting the Sysmon log path:
+   - **Platform:** `windows`
+   - **Target Pattern:** `wel://Microsoft-Windows-Sysmon/Operational:*`
+   - **Retention Period: :** `10`
+3.  Save the configuration to ensure automated hourly parsing and forwarding.
+---
