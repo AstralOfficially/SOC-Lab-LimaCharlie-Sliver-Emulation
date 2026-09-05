@@ -1,14 +1,18 @@
 Sysmon & Sigma Pipeline Ingestion
 
-## 1. Enabling Managed Sigma Detection Rules
+## 1. Artifact Collection Rule:
 
 To ingest low-level Windows operational security events:
 
 1.  Navigate to Artifact Collection in the LimaCharlie left navigation bar.
-2.  Create an ingestion rule targeting the Sysmon log path:
-   - **Platform:** `windows`
+     
+<!-- Screenshot Placeholder -->
+> **Screenshot:** <img src="../screenshots/04-artifact-collection.png">
+> **Timestamp:** <a href="https://www.youtube.com/watch?v=du6_Dk7-a-k&t=5m42s"> <img src="https://img.shields.io/badge/-Youtube-CD201F?&style=for-the-badge&logo=youtube&logoColor=white" /></a>
 
-## 4. Enabling Managed Sigma Detection Rules
+> **Caption:** Adding Artifact rule.
+
+## 4. Sigma Detection Extension
 
 1.  In the upper-right corner of the LimaCharlie console, open Add-ons.
 2.  Select Extensions and search for `ext-sigma`
