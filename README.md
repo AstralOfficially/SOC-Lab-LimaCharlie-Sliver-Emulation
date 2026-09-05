@@ -1,4 +1,5 @@
 # Hands-on SOC Lab: LimaCharlie EDR Deployment & Sliver C2 Adversary Emulation
+<img src="EDR .Sliver.VMs.jpg">
 
 **Lab Date:** September 5, 2026  
 **Environment:** Cloud Lab Architecture (Ubuntu Linux 22.04 LTS & Windows Server 2022 / Windows 10 x64)  
