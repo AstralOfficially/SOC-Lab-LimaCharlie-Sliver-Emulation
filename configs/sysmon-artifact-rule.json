@@ -1,0 +1,12 @@
+{
+  "name": "windows-sysmon-logs",
+  "patterns": [
+    "wel://Microsoft-Windows-Sysmon/Operational:*"
+  ],
+  "retention_days": 10,
+  "platforms": [
+    "windows"
+  ],
+  "delete_on_upload": false,
+  "ignore_ssl_errors": false
+}
