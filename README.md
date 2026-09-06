@@ -82,6 +82,10 @@ Detonating the payload established an active C2 session back to the operator con
 - [03. Execution and Post-Exploitation](docs/03-execution-and-telemetry-analysis.md)
 - [04. Detection Analysis and Engineering](docs/04-detection-engineering.md)
 - [05. Lessons Learned & Retrospective](docs/05-lessons-learned.md)
+
+- MITRE ATT&CK: T1587.001
+- Develop Capabilities: Malware
+  
 ```text
 [server] sliver > sessions
 ID         Name             Transport   Remote Address          Hostname            Username
