@@ -79,7 +79,9 @@ ID         Name             Transport   Remote Address          Hostname        
 ```
 
 #### A. Session Establishment
-Detonating the payload established an active C2 session back to the operator console:
+Detonating the payload established an active C2 session back to the operator console.
+Investigate the adversary execution from the defender's perspective inside LimaCharlie EDR. 
+Review process hierarchy, signature integrity, socket bindings, file hash threat intelligence, and construct a detection rule.
 
 
 ## TTPs
