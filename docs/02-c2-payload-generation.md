@@ -1,4 +1,4 @@
-# Adversary Emulation with Sliver C2
+# C2 Infrastructure and Payload Generation
 Compile a custom x64 Windows executable beacon payload configured to callback to the Linux host IP over HTTP:
 
 ## 1. Endpoint Detonation
