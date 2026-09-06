@@ -30,7 +30,7 @@ This repository documents the end-to-end setup of an enterprise Detection and Re
 
 ## Step-by-Step Implementation
 
-### 1. LimaCharlie Organization & Sensor Deployment
+### 1. [LimaCharlie Organization & Sensor Deployment](docs/01-edr-agent-installation.md)
 * **Tenant Initialization:** Created organization `Astral Solutions` hosted in the Canada datacenter region (`canada-1`).
 * **Sensor Key Generation:** Provisioned a dedicated installation key titled `Windows VM - Lab`.
 * **Sensor Installation:**
@@ -51,7 +51,7 @@ This repository documents the end-to-end setup of an enterprise Detection and Re
 * **Sigma Detection Extension:**
   * Installed the `ext-sigma` extension from the Add-ons Marketplace to automatically match open-source Sigma rules against incoming Windows event logs.
 
-### 3. Adversary Emulation with Sliver C2
+### 3. [C2 Infrastructure and Payload Generation](docs/02-c2-payload-generation.md)
 * **Service Initialization:**
   * Managed the system daemon on the Linux attacker machine:
     ```bash
@@ -71,7 +71,7 @@ This repository documents the end-to-end setup of an enterprise Detection and Re
 * **Delivery:**
   * Staged the binary via HTTP web server and downloaded it to `C:\Users\Administrator\Downloads\` on the Windows host.
 
-### 4. Telemetry Analysis & Threat Hunting
+### 4. [Telemetry Analysis & Threat Hunting](docs/03-execution-and-telemetry-analysis.md)
 ```text
 [server] sliver > sessions
 ID         Name             Transport   Remote Address          Hostname            Username
@@ -81,12 +81,6 @@ ID         Name             Transport   Remote Address          Hostname        
 #### A. Session Establishment
 Detonating the payload established an active C2 session back to the operator console:
 
-## Documentation Index
-- [01. EDR Setup and Configuration](docs/01-edr-agent-installation.md)
-- [02. C2 Infrastructure and Payload Generation](docs/02-c2-payload-generation.md)
-- [03. Execution and Post-Exploitation](docs/03-execution-and-telemetry-analysis.md)
-- [04. Detection Analysis and Engineering](docs/04-detection-engineering.md)
-- [05. Lessons Learned & Retrospective](docs/05-lessons-learned.md)
 
 ## TTPs
 - MITRE ATT&CK: T1587.001- Develop Capabilities: Malware
