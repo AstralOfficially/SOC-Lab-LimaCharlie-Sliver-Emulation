@@ -71,7 +71,7 @@ This repository documents the end-to-end setup of an enterprise Detection and Re
 * **Delivery:**
   * Staged the binary via HTTP web server and downloaded it to `C:\Users\Administrator\Downloads\` on the Windows host.
 
-### 4. [Telemetry Analysis & Threat Hunting](docs/03-execution-and-telemetry-analysis.md)
+### 4. [Payload Installation, Telemetry Analysis & Threat Hunting](docs/03-execution-and-telemetry-analysis.md)
 ```text
 [server] sliver > sessions
 ID         Name             Transport   Remote Address          Hostname            Username
