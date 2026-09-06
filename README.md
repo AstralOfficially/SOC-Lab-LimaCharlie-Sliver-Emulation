@@ -83,12 +83,13 @@ Detonating the payload established an active C2 session back to the operator con
 - [04. Detection Analysis and Engineering](docs/04-detection-engineering.md)
 - [05. Lessons Learned & Retrospective](docs/05-lessons-learned.md)
 
+## TTPs
 - MITRE ATT&CK: T1587.001- Develop Capabilities: Malware
-- (MITRE ATT&CK: T1033 – System Owner/User Discovery)
-- (MITRE ATT&CK: T1082 – System Information Discovery)
-- (MITRE ATT&CK: T1049 – System Network Connections Discovery)
-- (MITRE ATT&CK: T1057 – Process Discovery)
-- (MITRE ATT&CK: T1518.001 – Security Software Discovery)
+- MITRE ATT&CK: T1033 – System Owner/User Discovery
+- MITRE ATT&CK: T1082 – System Information Discovery
+- MITRE ATT&CK: T1049 – System Network Connections Discovery
+- MITRE ATT&CK: T1057 – Process Discovery
+- MITRE ATT&CK: T1518.001 – Security Software Discovery
   
 ```text
 [server] sliver > sessions
