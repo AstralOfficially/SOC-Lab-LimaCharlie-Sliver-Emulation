@@ -13,7 +13,7 @@ Compile a custom x64 Windows executable beacon payload configured to callback to
        jobs
       ```
   <!-- Screenshot Placeholder -->
-> **Screenshot:**
+ **Screenshot:**
 > <img src="../screenshots/05-sliver.PNG">
 
 > **Timestamp:** <a href="https://www.youtube.com/watch?v=du6_Dk7-a-k&t7m10s"> <img src="https://img.shields.io/badge/-Youtube-CD201F?&style=for-the-badge&logo=youtube&logoColor=white" /></a>
@@ -34,14 +34,12 @@ Compile a custom x64 Windows executable beacon payload configured to callback to
     ```
     *Output Binary:* `EVERYDAY_BOWTIE.exe` (SHA-256: `65d05836383075be424604df356f14f33d565407cb903419bee27ce59d293c5a`)
 
-     <!-- Screenshot Placeholder -->
-> **Screenshot:**
-> <img src="../screenshots/06-sliverpayload.PNG">
-
+<!-- Screenshot Placeholder -->
+**Screenshot:** <img src="../screenshots/06-sliverpayload.PNG">
 > **Timestamp:** <a href="https://www.youtube.com/watch?v=du6_Dk7-a-k&t11m19s"> <img src="https://img.shields.io/badge/-Youtube-CD201F?&style=for-the-badge&logo=youtube&logoColor=white" /></a>
 
 > **Caption:** Sliver compiling the custom binary implant (URBAN_UPPER.exe).
-> 
+
 * **Delivery:**
   * Staged the binary via HTTP web server and downloaded it to `C:\Users\Administrator\Downloads\` on the Windows host.
  
