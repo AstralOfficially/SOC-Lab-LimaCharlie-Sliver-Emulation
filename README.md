@@ -72,6 +72,11 @@ This repository documents the end-to-end setup of an enterprise Detection and Re
   * Staged the binary via HTTP web server and downloaded it to `C:\Users\Administrator\Downloads\` on the Windows host.
 
 ### 4. Telemetry Analysis & Threat Hunting
+```text
+[server] sliver > sessions
+ID         Name             Transport   Remote Address          Hostname            Username
+5c63bb4b   EVERYDAY_BOWTIE  http(s)     10.1.166.113:49834      EC2AMAZ-2BUU2T2     Administrator
+```
 
 #### A. Session Establishment
 Detonating the payload established an active C2 session back to the operator console:
@@ -91,7 +96,4 @@ Detonating the payload established an active C2 session back to the operator con
 - MITRE ATT&CK: T1057 – Process Discovery
 - MITRE ATT&CK: T1518.001 – Security Software Discovery
   
-```text
-[server] sliver > sessions
-ID         Name             Transport   Remote Address          Hostname            Username
-5c63bb4b   EVERYDAY_BOWTIE  http(s)     10.1.166.113:49834      EC2AMAZ-2BUU2T2     Administrator
+
