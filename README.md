@@ -88,6 +88,7 @@ Review process hierarchy, signature integrity, socket bindings, file hash threat
  # Adversary Offensive Tools
 - MITRE ATT&CK: T1587.001- Develop Capabilities Malware
 - MITRE ATT&CK: T1204.002 – User Execution Malicious File
+- MITRE ATT&CK: T1036 – Masquerading / Unsigned Binary
   
  # Host Reconnaissance & Defensive Tool Discovery
 - MITRE ATT&CK: T1033 – System Owner/User Discovery
