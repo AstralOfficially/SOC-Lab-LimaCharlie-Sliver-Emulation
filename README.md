@@ -71,7 +71,7 @@ This repository documents the end-to-end setup of an enterprise Detection and Re
 * **Delivery:**
   * Staged the binary via HTTP web server and downloaded it to `C:\Users\Administrator\Downloads\` on the Windows host.
 
-### 4. [Payload Installation, Telemetry Analysis & Threat Hunting](docs/03-execution-and-telemetry-analysis.md)
+### 4. [Payload Installation](docs/03-execution-and-telemetry-analysis.md)
 ```text
 [server] sliver > sessions
 ID         Name             Transport   Remote Address          Hostname            Username
@@ -80,9 +80,10 @@ ID         Name             Transport   Remote Address          Hostname        
 
 #### A. Session Establishment
 Detonating the payload established an active C2 session back to the operator console.
-Investigate the adversary execution from the defender's perspective inside LimaCharlie EDR. 
-Review process hierarchy, signature integrity, socket bindings, file hash threat intelligence, and construct a detection rule.
 
+
+### 5. [Detection Analysis and Engineering](docs/04-detection-engineering.md)
+Investigate the adversary execution from the defender's perspective inside LimaCharlie EDR. Review process hierarchy, signature integrity, socket bindings, file hash threat intelligence, and construct a detection rule.
 
 ## TTPs
  # Adversary Offensive Tools
