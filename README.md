@@ -98,4 +98,6 @@ Investigate the adversary execution from the defender's perspective inside LimaC
 - MITRE ATT&CK: T1057 – Process Discovery
 - MITRE ATT&CK: T1518.001 – Security Software Discovery
   
-
+# Resources
+- https://www.sans.org/posters/hunt-evil
+- https://echotrail.io/
