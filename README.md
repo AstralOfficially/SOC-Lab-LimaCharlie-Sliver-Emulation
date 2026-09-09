@@ -101,3 +101,4 @@ Investigate the adversary execution from the defender's perspective inside LimaC
 # Resources
 - https://www.sans.org/posters/hunt-evil
 - https://echotrail.io/
+- https://lolbas-project.github.io/#
